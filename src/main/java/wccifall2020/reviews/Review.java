@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 public class Review {
 
     private Long id;
-    private String date;        //simpledateformat?
+    private String date;
     private String category;
     private String title;
     private String imageURL;       
@@ -25,14 +25,6 @@ public class Review {
 
     public Long getId(){
         return id;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public String getCategory() {
-        return category;
     }
 
     public String getTitle() {

@@ -13,7 +13,6 @@
 <main>
     <div class="container-review" th:each="review: ${reviewsModel}">
         <div class="rows"><a th:href="@{/review(id=${review.id})}" th:text="${review.title}"></a></div>
-        <!--    <p th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}" th:text="${review.title}" ></a></p>-->
     </div>
 </main>
 
