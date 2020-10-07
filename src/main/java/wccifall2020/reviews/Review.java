@@ -27,6 +27,14 @@ public class Review {
         return id;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
     public String getTitle() {
         return title;
     }
