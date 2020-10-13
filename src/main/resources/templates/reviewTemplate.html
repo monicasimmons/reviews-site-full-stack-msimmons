@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Review</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<header>
+    <h2 th:text="${reviewModel.title}"/>
+</header>
+
+<main>
+    <div class="review">
+        <p th:text="'Reviewed on:' + ${reviewModel.date}"></p>
+        <img th:src="${reviewModel.imageURL}"/>
+        <p th:text="${reviewModel.content}"></p>
+        <p th:text="'Category:' + ${reviewModel.category}"></p>
+        <p><a href="/reviews">Read All Reviews</a></p>
+
+    </div>
+</main>
+
+<footer>
+    <small>&copy We Can Code IT 2020</small>
+</footer>
+
+</body>
+</html>
