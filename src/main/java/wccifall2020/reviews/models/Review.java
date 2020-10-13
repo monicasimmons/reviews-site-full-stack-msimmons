@@ -1,10 +1,7 @@
 package wccifall2020.reviews.models;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.Objects;
@@ -12,14 +9,13 @@ import java.util.Objects;
 @Entity
 public class Review {
 
-    //allow for description/content/body longer than 255 characters
-
     @Id
     @GeneratedValue
     private Long id;
     private String date;
     private String title;
-    private String imageURL;       
+    private String imageURL;
+    @Lob
     private String content;
     @ManyToOne
     private Category category;
