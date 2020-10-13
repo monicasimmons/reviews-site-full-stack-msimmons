@@ -6,15 +6,15 @@
 </head>
 <body>
 <header>
-    <h2 th:text="${reviewModel.title}"/>
+    <h2 th:text="${review.title}"/>
 </header>
 
 <main>
     <div class="review">
-        <p th:text="'Reviewed on:' + ${reviewModel.date}"></p>
-        <img th:src="${reviewModel.imageURL}"/>
-        <p th:text="${reviewModel.content}"></p>
-        <p th:text="'Category:' + ${reviewModel.category}"></p>
+        <p th:text="'Reviewed on:' + ${review.date}"></p>
+        <img th:src="${review.imageURL}"/>
+        <p th:text="${review.content}"></p>
+        <p th:text="'Category:' + ${review.category}"></p>
         <p><a href="/reviews">Read All Reviews</a></p>
 
     </div>
