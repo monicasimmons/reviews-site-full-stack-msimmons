@@ -1,22 +1,25 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Review</title>
     <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link th:href="@{/css/layout.css}" rel="stylesheet"/>
 </head>
+<nav>
+    <a href="/reviews">Reviews</a>
+    <a href="/categories">Review Categories</a>
+</nav>
 <body>
 <header>
-    <h2 th:text="${review.title}"/>
+    <h1 th:text="${review.title}"/>
 </header>
 
 <main>
     <div class="review">
-        <p th:text="'Reviewed on:' + ${review.date}"></p>
+        <p th:text="'Reviewed on: ' + ${review.date}"></p>
         <img th:src="${review.imageURL}"/>
         <p th:text="${review.content}"></p>
-        <p th:text="'Category:' + ${review.category}"></p>
-        <p><a href="/reviews">Read All Reviews</a></p>
-
+        <p th:text="'Category: ' + ${review.category.getCategoryName()}"></p>
     </div>
 </main>
 

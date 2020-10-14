@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
     <title>Category</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link th:href="@{/css/layout.css}" rel="stylesheet"/>
 </head>
+<nav>
+    <a href="/reviews">Reviews</a>
+    <a href="/categories">Review Categories</a>
+</nav>
 <body>
-<h1>Category</h1>
+<header>
+<!--    <h1 th:text="${category.categoryName}"></h1>-->
+    <h1 th:text="${category.categoryName} + ' Reviews'"></h1>
+</header>
+<main>
+<div class="category">
+    <div class="container-review" th:each="review: ${category.reviews}">
+        <div class="rows"><a th:href="@{'/reviews/' + ${review.id}}" th:text="${review.title}"></a></div>
+    </div>
+</div>
+</main>
+<footer>
+    <small>&copy We Can Code IT 2020</small>
+</footer>
 </body>
 </html>
